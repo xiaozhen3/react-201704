@@ -1,0 +1,17 @@
+1、使用apm包管理器安装atom的packages;
+首先进入到.atom/packages文件夹下
+$ cd ~/.atom/packages
+$ apm install <package-name>
+这里的<package-name>换为atom-beautify，运行命令。
+等待一些时间后，ok！atom-beautify安装完成。
+
+2、使用git clone整个插件的仓库
+这种方法可能会少相关依赖，需要自行在package里运行npm install <node-package>安装相关的依赖。
+在atom.io上(或者在atom设置界面中跳转到插件的网页)找到插件页面，点击Repo跳到插件的github仓库，将<repo-url>替换为仓库的地址，然后在packages目录下运行下列命令：
+
+  $ git clone <repo-url>
+
+3、使用自己创建的仓库
+为了保证各个设备的Atom设置同步，可以自己新建一个git仓库，把自己的插件及配置文件(config.cson,snippets.cson等等...) 提交上去，今后就可以方便的安装自己提交上去的插件啦！
+
+  $ git clone https://github.com/alucardlockon/MyAtomPackagesAndConfig
